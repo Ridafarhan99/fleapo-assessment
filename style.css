@@ -12,7 +12,7 @@ body {
 
 .container {
   margin: 30px;
-  padding-top: 120px; /* Increased padding-top for more space between header and content */
+  padding-top: 120px;
 }
 
 .header {
@@ -20,10 +20,10 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1; /* Ensure it stays on top */
+  z-index: 1;
   color: #ffffff;
   padding-left: 20px;
-  box-sizing: border-box; /* Include padding in the width */
+  box-sizing: border-box;
 }
 
 .header h6 {
@@ -46,10 +46,10 @@ body {
 .row {
   margin-top: 50px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 30px;
   padding: 20px 0;
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .product-card {
@@ -186,7 +186,32 @@ body {
   margin-left: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .header {
+    padding-left: 20px;
+  }
+
+  .container {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+
+  .row {
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .product-card {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .product-action {
+    bottom: 10px;
+    right: 10px;
+  }
+
   .learn-more {
     font-size: 12px;
     padding: 6px 15px;
